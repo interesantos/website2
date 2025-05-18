@@ -1,0 +1,70 @@
+Photo Descriptions for SamuiWater.com
+
+1. Hero Banner Image:
+- Dimensions: 1920x1080px
+- Description: Aerial view of Koh Samui beaches with crystal clear water, showing the beautiful island landscape where water delivery service is provided. Should convey tropical paradise and purity.
+
+2. Product Photos:
+- 1.5L Bottle (Close-up):
+  - Dimensions: 800x800px  
+  - Description: Clear high-quality shot of 1.5L water bottle with label visible, showing FDA approval marks. Bottle should look pristine with water droplets for freshness effect.
+
+- 0.5L Bottle (Pack):
+  - Dimensions: 800x800px
+  - Description: Six-pack of 0.5L bottles neatly arranged, showing portability for tourists. Packaging should look sturdy and clean.
+
+3. Lifestyle Photos:
+- Tourist at Ang Thong Marine Park:
+  - Dimensions: 1200x800px
+  - Description: Happy tourist drinking water while overlooking scenic view. Should show bottle in use during island activities.
+
+- Couple in Villa Kitchen:
+  - Dimensions: 1200x800px  
+  - Description: Smiling couple arranging water bottles in vacation rental kitchen, showing convenience of delivery service.
+
+- Expat Delivery:
+  - Dimensions: 1200x800px
+  - Description: Delivery person handing water package to expat at condo door, showing subscription service reliability.
+
+4. Trust Badges:
+- FDA Certification:
+  - Dimensions: 200x200px
+  - Description: Official FDA certification badge with clear text
+
+- 2C2P Payment:
+  - Dimensions: 200x200px  
+  - Description: Secure payment provider logo showing trusted checkout
+
+5. Testimonial Photos:
+- Emma (Tourist):
+  - Dimensions: 400x400px
+  - Description: Smiling Australian woman holding water bottle at beach
+
+- John (Visitor):
+  - Dimensions: 400x400px
+  - Description: British man with water bottle near pool
+
+- Sarah (Expat):
+  - Dimensions: 400x400px  
+  - Description: American woman in home with water delivery
+
+- Hans (Tourist):
+  - Dimensions: 400x400px
+  - Description: German family with water bottles in villa
+
+6. Process Icons:
+- Delivery Truck:
+  - Dimensions: 100x100px
+  - Description: Simple flat icon of delivery vehicle
+
+- Safety Shield:
+  - Dimensions: 100x100px  
+  - Description: Shield icon representing water safety
+
+- Heart Icon:
+  - Dimensions: 100x100px
+  - Description: Heart symbol for subscription benefits
+
+- Smile Icon:
+  - Dimensions: 100x100px
+  - Description: Happy face representing customer service
