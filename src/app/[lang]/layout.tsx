@@ -11,7 +11,7 @@ export default function LangLayout({
   children: React.ReactNode
   params: Promise<{ lang: string }>
 }) {
-  const { lang } = use(params);
+  use(params); // params needed for Layout component
   return (
     <CartProvider>
       <Layout params={params}>

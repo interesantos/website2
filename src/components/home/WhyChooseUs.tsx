@@ -1,4 +1,4 @@
-import { FaTruck, FaShieldAlt, FaHeart, FaSmile } from 'react-icons/fa';
+import { FaTruck, FaShieldAlt, FaSmile } from 'react-icons/fa';
 
 export default function WhyChooseUs() {
   return (

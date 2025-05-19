@@ -1,5 +1,6 @@
 import Hero from '@/components/home/Hero';
 import ContactSchema from '@/components/seo/ContactSchema';
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
@@ -48,13 +49,13 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <a href="https://line.me/ti/p/~@samuiwater" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/line.svg" alt="Line" className="h-8 w-8" />
+                  <Image src="/icons/line.svg" alt="Line" width={32} height={32} className="h-8 w-8" />
                 </a>
                 <a href="https://wa.me/66838391461" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/whatsapp.svg" alt="WhatsApp" className="h-8 w-8" />
+                  <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={32} height={32} className="h-8 w-8" />
                 </a>
                 <a href="https://instagram.com/samuiwater" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/instagram.svg" alt="Instagram" className="h-8 w-8" />
+                  <Image src="/icons/instagram.svg" alt="Instagram" width={32} height={32} className="h-8 w-8" />
                 </a>
               </div>
             </div>

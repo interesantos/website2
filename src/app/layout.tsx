@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
-import Layout from "@/components/layout/Layout";
 import { CartProvider } from "@/context/CartContext";
 
 const rajdhani = Rajdhani({
