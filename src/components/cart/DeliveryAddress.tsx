@@ -5,6 +5,10 @@ import { useState } from 'react';
 export default function DeliveryAddress({ onAddressChange }: { onAddressChange: (address: string) => void }) {
   const [address, setAddress] = useState('');
 
+  const handleAddressChange = (value: string) => {
+    setAddress(value);
+    onAddressChange(value);
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6 mb-6">

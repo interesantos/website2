@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { Product } from '@/types/products';
 import { getProductBySlug, getAllProducts } from '@/lib/products';
 import ProductDetails from '@/components/products/ProductDetails';
 import ProductSchema from '@/components/seo/ProductSchema';
