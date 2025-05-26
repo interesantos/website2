@@ -7,12 +7,14 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
   // Skip middleware for:
-  // 1. Static files
+  // 1. Static files (including images)
   // 2. Root path
-  // 3. Any path that starts with /_next
+  // 3. Next.js internal paths
+  // 4. API routes
   if (staticExtensions.some(ext => pathname.endsWith(ext)) ||
       pathname === '/' ||
-      pathname.startsWith('/_next')) {
+      pathname.startsWith('/_next') ||
+      pathname.startsWith('/api/')) {
     return NextResponse.next();
   }
 

@@ -26,7 +26,9 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: true,
   skipMiddlewareUrlNormalize: true,
-  skipTrailingSlashRedirect: true
+  skipTrailingSlashRedirect: true,
+  // Ensure static assets are served from root in all environments
+  basePath: '',
 };
 
 export default nextConfig;
