@@ -17,7 +17,8 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ['@heroicons/react']
-  }
+  },
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://samuiwater.com' : undefined
 };
 
 export default nextConfig;
