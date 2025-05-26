@@ -5,12 +5,14 @@ interface HeroProps {
   headline?: string;
   subheadline?: string;
   showButtons?: boolean;
+  lang?: string;
 }
 
-export default function Hero({ 
+export default function Hero({
   headline = "Pure Water, Delivered Seamlessly to Your Koh Samui Stay",
   subheadline = "Enjoy safe, FDA-approved bottled water from trusted brands, delivered to your hotel, villa, or home in 24–48 hours. Perfect for 7–14 day vacations or expat life, our English-friendly service offers one-time orders and flexible subscriptions, backed by secure payments and dedicated support. Stay hydrated with ease and confidence.",
-  showButtons = true 
+  showButtons = true,
+  lang = 'en'
 }: HeroProps) {
   return (
     <section className="relative py-16 md:py-24">
@@ -39,13 +41,13 @@ export default function Hero({
           {showButtons && (
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/shop" 
+                href={`/${lang}/bottled-drinking-water-delivery`}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
               >
                 Shop One-Time Packs
               </Link>
               <Link 
-                href="/subscriptions" 
+                href={`/${lang}/bottled-drinking-water-delivery-subscription`}
                 className="bg-white hover:bg-gray-100 text-blue-600 font-semibold py-3 px-6 border border-blue-600 rounded-lg text-center transition-colors"
               >
                 Explore Subscriptions

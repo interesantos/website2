@@ -20,13 +20,13 @@ export default function Home({
   return (
     <>
       <HomeSchema />
-      <Hero />
+      <Hero lang={lang as string} />
       <ProductHighlights lang={lang as string} />
       <WhyChooseUs />
       <Subscriptions />
       <HowItWorks />
       <Resources />
-      <FinalCTA />
+      <FinalCTA lang={lang as string} />
     </>
   );
 }

@@ -1,6 +1,16 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
+
+const NAV_LINKS = [
+  { path: 'bottled-drinking-water-delivery', label: 'Shop Now' },
+  { path: 'bottled-drinking-water-delivery-subscription', label: 'Subscriptions' },
+  { path: 'why-us', label: 'Why Us' },
+  { path: 'reviews', label: 'Reviews' },
+  { path: 'resources', label: 'Resources' },
+  { path: 'contact', label: 'Contact' }
+];
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
@@ -8,23 +18,28 @@ import { useCart } from '@/context/CartContext';
 export default function Header({ params }: { params: { lang: string } }) {
   const { itemCount } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const langRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
+  const openMenu = () => {
+    setIsMenuOpen(true);
+    document.addEventListener('click', handleClickOutside);
+  };
 
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.removeEventListener('click', handleClickOutside);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      closeMenu();
     }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMenuOpen]);
+    if (langRef.current && !langRef.current.contains(event.target as Node)) {
+      setIsLangOpen(false);
+    }
+  };
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 w-full">
@@ -32,7 +47,13 @@ export default function Header({ params }: { params: { lang: string } }) {
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-gray-700"
-          onClick={() => setIsMenuOpen(prev => !prev)}
+          onClick={() => {
+            if (isMenuOpen) {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          }}
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -54,26 +75,33 @@ export default function Header({ params }: { params: { lang: string } }) {
 
         {/* Main Navigation */}
         <nav className="hidden lg:flex space-x-8">
-          <Link href={`/${params.lang}/bottled-drinking-water-delivery`} className="text-gray-700 hover:text-blue-600">Shop Now</Link>
-          <Link href={`/${params.lang}/bottled-drinking-water-delivery-subscription`} className="text-gray-700 hover:text-blue-600">Subscriptions</Link>
-          <Link href={`/${params.lang}/why-us`} className="text-gray-700 hover:text-blue-600">Why Us</Link>
-          <Link href={`/${params.lang}/reviews`} className="text-gray-700 hover:text-blue-600">Reviews</Link>
-          <Link href={`/${params.lang}/resources`} className="text-gray-700 hover:text-blue-600">Resources</Link>
-          <Link href={`/${params.lang}/contact`} className="text-gray-700 hover:text-blue-600">Contact</Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.path}
+              href={`/${params.lang}/${link.path}`}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`lg:hidden absolute top-16 left-0 right-0 bg-white shadow-lg z-50 py-6 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
+          className={`lg:hidden absolute top-16 left-0 right-0 bg-white shadow-lg z-50 py-6 ${isMenuOpen ? 'block' : 'hidden'}`}
         >
-          <div className="flex flex-col items-center space-y-8 px-4">
-            <Link href="/[lang]/shop" as={`/${params.lang}/shop`} className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center">Shop Now</Link>
-            <Link href="/[lang]/bottled-drinking-water-delivery-subscription" as={`/${params.lang}/bottled-drinking-water-delivery-subscription`} className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center">Subscriptions</Link>
-            <Link href="/[lang]/why-us" as={`/${params.lang}/why-us`} className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center">Why Us</Link>
-            <Link href="/[lang]/reviews" as={`/${params.lang}/reviews`} className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center">Reviews</Link>
-            <Link href="/[lang]/resources" as={`/${params.lang}/resources`} className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center">Resources</Link>
-            <Link href="/[lang]/contact" as={`/${params.lang}/contact`} className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center">Contact</Link>
+          <div className="flex flex-col items-center space-y-4 px-4">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.path}
+                href={`/${params.lang}/${link.path}`}
+                className="text-2xl text-gray-700 hover:text-blue-600 py-3 w-full text-center"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -81,15 +109,18 @@ export default function Header({ params }: { params: { lang: string } }) {
         <div className="relative">
           <button
             className="flex items-center text-gray-700 hover:text-blue-600"
-            onClick={() => setIsMenuOpen(prev => !prev)}
+            onClick={() => setIsLangOpen(prev => !prev)}
           >
+            <div ref={langRef} className="py-1">
+              {/* Language options will be inserted here */}
+            </div>
             EN
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div
-            className={`absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg z-50 ${isMenuOpen ? 'block' : 'hidden'}`}
+            className={`absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg z-50 ${isLangOpen ? 'block' : 'hidden'}`}
           >
             <div className="py-1">
               <Link href="/en" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">English</Link>
@@ -106,8 +137,8 @@ export default function Header({ params }: { params: { lang: string } }) {
 
           {/* Cart */}
           <div className="ml-4">
-            <Link href="/[lang]/cart" as={`/${params.lang}/cart`} className="flex items-center space-x-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-              <span>Your Water Awaits ({itemCount})</span>
+            <Link href="/[lang]/cart" as={`/${params.lang}/cart`} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 whitespace-nowrap">
+              Your Water Awaits ({itemCount})
             </Link>
           </div>
       </div>
