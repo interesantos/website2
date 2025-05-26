@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    domains: ['samuiwater.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -12,6 +13,7 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+    unoptimized: process.env.NODE_ENV === 'production' ? false : true,
   },
   experimental: {
     optimizePackageImports: ['@heroicons/react']
