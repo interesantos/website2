@@ -6,8 +6,13 @@ const staticExtensions = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.ico', '.wo
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Skip middleware for static files and root path
-  if (staticExtensions.some(ext => pathname.endsWith(ext)) || pathname === '/') {
+  // Skip middleware for:
+  // 1. Static files
+  // 2. Root path
+  // 3. Any path that starts with /_next
+  if (staticExtensions.some(ext => pathname.endsWith(ext)) ||
+      pathname === '/' ||
+      pathname.startsWith('/_next')) {
     return NextResponse.next();
   }
 
