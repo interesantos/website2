@@ -19,8 +19,14 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@heroicons/react']
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://samuiwater.com' : undefined,
-  basePath: '',
-  trailingSlash: true
+  i18n: {
+    locales: ['en', 'de', 'fr', 'es', 'it', 'ru', 'th'],
+    defaultLocale: 'en',
+    localeDetection: false
+  },
+  trailingSlash: true,
+  skipMiddlewareUrlNormalize: true,
+  skipTrailingSlashRedirect: true
 };
 
 export default nextConfig;
