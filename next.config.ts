@@ -1,12 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://samuiwater.com' : '',
   i18n: {
     locales: ['en'],
-    defaultLocale: 'en',
-    localeDetection: false
+    defaultLocale: 'en'
   },
   images: {
     domains: ['samuiwater.com'],
