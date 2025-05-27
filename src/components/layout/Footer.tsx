@@ -36,13 +36,13 @@ export default function Footer() {
               <li className="text-gray-600">+66 83 8391 461</li>
               <li className="flex space-x-4 mt-4">
                 <Link href="https://line.me/ti/p/~@samuiwater" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/line.svg" alt="Line" className="h-6" />
+                  <img src="/images/line.png" alt="Line" className="h-6" />
                 </Link>
                 <Link href="https://wa.me/66838391461" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/whatsapp.svg" alt="WhatsApp" className="h-6" />
+                  <img src="/images/whatsapp.png" alt="WhatsApp" className="h-6" />
                 </Link>
                 <Link href="https://instagram.com/samuiwater" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/instagram.svg" alt="Instagram" className="h-6" />
+                  <img src="/images/instagram.png" alt="Instagram" className="h-6" />
                 </Link>
               </li>
             </ul>
@@ -51,10 +51,10 @@ export default function Footer() {
           {/* Payment Methods */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Payment Methods</h3>
-              <div className="flex space-x-4">
-                <img src="/icons/visa.svg" alt="Visa" className="h-8" />
-                <img src="/icons/mastercard.svg" alt="Mastercard" className="h-8" />
-                <img src="/icons/2c2p.svg" alt="2C2P" className="h-8" />
+              <div className="flex space-x-4 items-center">
+                <img src="/images/visa.png" alt="Visa" className="h-8" />
+                <img src="/images/mastercard.png" alt="Mastercard" className="h-8" />
+                <img src="/images/2c2p.png" alt="2C2P" className="h-4 w-8" />
               </div>
             <p className="text-sm text-gray-500 mt-4">
               We use cookies to enhance your experience. Accept or adjust settings.

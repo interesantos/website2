@@ -32,15 +32,15 @@ export default function TrustAndCompliance() {
                 <h3 className="text-xl font-semibold mb-4">Compliance & Security</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <img src="/icons/etda.svg" alt="ETDA" className="h-6 mr-2" />
+                    <img src="/images/etda.png" alt="ETDA" className="h-6 w-12 mr-2" />
                     <span>Registered with ETDA</span>
                   </li>
                   <li className="flex items-start">
-                    <img src="/icons/pdpa.svg" alt="PDPA" className="h-6 mr-2" />
+                    <img src="/images/pdpa.png" alt="PDPA" className="h-6 w-12 mr-2" />
                     <span>PDPA compliant data protection</span>
                   </li>
                   <li className="flex items-start">
-                    <img src="/icons/2c2p.svg" alt="2C2P" className="h-6 mr-2" />
+                    <img src="/images/2c2p.png" alt="2C2P" className="h-6 w-12 mr-2" />
                     <span>2C2P secure payments</span>
                   </li>
                 </ul>
