@@ -226,3 +226,51 @@ App
 - typescript
 - tailwindcss
 - next/font (Geist fonts)
+
+## Image Handling Architecture
+
+### Configuration
+1. **next.config.ts** must include:
+```typescript
+images: {
+  domains: ['samuiwater.com', 'localhost'],
+  remotePatterns: [
+    { protocol: 'https', hostname: '**' },
+    { protocol: 'http', hostname: '**' }
+  ]
+},
+skipMiddlewareUrlNormalize: true,
+skipTrailingSlashRedirect: true
+```
+
+2. **middleware.ts** must exclude image paths:
+```typescript
+matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images/).*)']
+```
+
+### Implementation Guidelines
+- Use Next.js Image component for optimized images
+- For direct image access:
+  - Place files in `public/images/`
+  - Reference as `/images/filename.ext`
+  - Ensure proper file permissions (`chmod -R a+r public/images`)
+
+### Testing
+A test page is available at:
+- `/en/test-images`
+- `/th/test-images`
+
+### Recommendation
+Prefer Next.js Image component for:
+- Product images
+- Hero images
+- Any content images impacting UX
+
+Use direct img tags only for:
+- Simple decorative images
+- When avoiding client components
+- Extremely simple pages
+
+This test page demonstrates both:
+1. Next.js Image component (recommended)
+2. Direct img tag (limited use cases)

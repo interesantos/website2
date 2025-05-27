@@ -16,7 +16,10 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ['@heroicons/react']
-  }
+  },
+  // Ensure static files are served correctly
+  skipMiddlewareUrlNormalize: true,
+  skipTrailingSlashRedirect: true
 };
 
 export default nextConfig;
