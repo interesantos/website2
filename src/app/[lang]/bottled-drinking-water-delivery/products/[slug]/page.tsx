@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
-import { Product } from '@/types/products';
+// Product type imported in lib/products
 import { getProductBySlug, getAllProducts } from '@/lib/products';
 import ProductDetails from '@/components/products/ProductDetails';
 import ProductSchema from '@/components/seo/ProductSchema';
+import { use } from 'react';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProductPage({ params }: PageProps) {
-  const { slug } = params;
+  const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) return notFound();
 

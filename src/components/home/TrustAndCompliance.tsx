@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function TrustAndCompliance() {
   return (
     <section className="bg-gray-50 py-16">
@@ -32,15 +33,15 @@ export default function TrustAndCompliance() {
                 <h3 className="text-xl font-semibold mb-4">Compliance & Security</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <img src="/images/etda.png" alt="ETDA" className="h-6 w-12 mr-2" />
+                    <Image src="/images/etda.png" alt="ETDA" width={48} height={24} className="h-6 w-12 mr-2" />
                     <span>Registered with ETDA</span>
                   </li>
                   <li className="flex items-start">
-                    <img src="/images/pdpa.png" alt="PDPA" className="h-6 w-12 mr-2" />
+                    <Image src="/images/pdpa.png" alt="PDPA" width={48} height={24} className="h-6 w-12 mr-2" />
                     <span>PDPA compliant data protection</span>
                   </li>
                   <li className="flex items-start">
-                    <img src="/images/2c2p.png" alt="2C2P" className="h-6 w-12 mr-2" />
+                    <Image src="/images/2c2p.png" alt="2C2P" width={48} height={24} className="h-6 w-12 mr-2" />
                     <span>2C2P secure payments</span>
                   </li>
                 </ul>

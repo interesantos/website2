@@ -5,10 +5,8 @@ import { useState } from 'react';
 export default function DeliveryAddress({ onAddressChange }: { onAddressChange: (address: string) => void }) {
   const [address, setAddress] = useState('');
 
-  const handleAddressChange = (value: string) => {
-    setAddress(value);
-    onAddressChange(value);
-  };
+  // Address changes handled directly in input onChange
+  // No need for separate handler function
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6 mb-6">

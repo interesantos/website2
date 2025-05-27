@@ -25,12 +25,12 @@ export default function SubscriptionDetails({ subscription }: Props) {
         isSubscription: true,
         subscriptionFrequency: 'monthly',
         savings: 'Save 10%',
-        monthlyVolumeLiters: '90',
-        bottleSizeLiters: '0.5',
+        monthlyVolumeLiters: 90,
+        bottleSizeLiters: 0.5,
         frequency: 'Monthly',
-        perDeliveryBottles: '180',
-        perMonthBottles: '180',
-        deliveryVolumeLiters: '90'
+        perDeliveryBottles: 180,
+        perMonthBottles: 180,
+        deliveryVolumeLiters: 90
       },
       {
         id: 'subscription-monthly-1.5L',
@@ -42,12 +42,12 @@ export default function SubscriptionDetails({ subscription }: Props) {
         isSubscription: true,
         subscriptionFrequency: 'monthly',
         savings: 'Save 10%',
-        monthlyVolumeLiters: '90',
-        bottleSizeLiters: '1.5',
+        monthlyVolumeLiters: 90,
+        bottleSizeLiters: 1.5,
         frequency: 'Monthly',
-        perDeliveryBottles: '60',
-        perMonthBottles: '60',
-        deliveryVolumeLiters: '90'
+        perDeliveryBottles: 60,
+        perMonthBottles: 60,
+        deliveryVolumeLiters: 90
       },
       {
         id: 'subscription-every-two-weeks-0.5L',
@@ -59,12 +59,12 @@ export default function SubscriptionDetails({ subscription }: Props) {
         isSubscription: true,
         subscriptionFrequency: 'bi-weekly',
         savings: 'Save 5%',
-        monthlyVolumeLiters: '90',
-        bottleSizeLiters: '0.5',
+        monthlyVolumeLiters: 90,
+        bottleSizeLiters: 0.5,
         frequency: 'Every Two Weeks',
-        perDeliveryBottles: '90',
-        perMonthBottles: '180',
-        deliveryVolumeLiters: '45'
+        perDeliveryBottles: 90,
+        perMonthBottles: 180,
+        deliveryVolumeLiters: 45
       },
       {
         id: 'subscription-every-two-weeks-1.5L',
@@ -76,12 +76,12 @@ export default function SubscriptionDetails({ subscription }: Props) {
         isSubscription: true,
         subscriptionFrequency: 'bi-weekly',
         savings: 'Save 5%',
-        monthlyVolumeLiters: '90',
-        bottleSizeLiters: '1.5',
+        monthlyVolumeLiters: 90,
+        bottleSizeLiters: 1.5,
         frequency: 'Every Two Weeks',
-        perDeliveryBottles: '30',
-        perMonthBottles: '60',
-        deliveryVolumeLiters: '45'
+        perDeliveryBottles: 30,
+        perMonthBottles: 60,
+        deliveryVolumeLiters: 45
       },
       {
         id: 'subscription-weekly-0.5L',
@@ -93,12 +93,12 @@ export default function SubscriptionDetails({ subscription }: Props) {
         isSubscription: true,
         subscriptionFrequency: 'weekly',
         savings: 'Save 2%',
-        monthlyVolumeLiters: '72',
-        bottleSizeLiters: '0.5',
+        monthlyVolumeLiters: 72,
+        bottleSizeLiters: 0.5,
         frequency: 'Weekly',
-        perDeliveryBottles: '36',
-        perMonthBottles: '144',
-        deliveryVolumeLiters: '18'
+        perDeliveryBottles: 36,
+        perMonthBottles: 144,
+        deliveryVolumeLiters: 18
       },
       {
         id: 'subscription-weekly-1.5L',
@@ -110,12 +110,12 @@ export default function SubscriptionDetails({ subscription }: Props) {
         isSubscription: true,
         subscriptionFrequency: 'weekly',
         savings: 'Save 2%',
-        monthlyVolumeLiters: '72',
-        bottleSizeLiters: '1.5',
+        monthlyVolumeLiters: 72,
+        bottleSizeLiters: 1.5,
         frequency: 'Weekly',
-        perDeliveryBottles: '12',
-        perMonthBottles: '48',
-        deliveryVolumeLiters: '18'
+        perDeliveryBottles: 12,
+        perMonthBottles: 48,
+        deliveryVolumeLiters: 18
       }
     ];
 

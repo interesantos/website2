@@ -36,13 +36,13 @@ export default function Footer() {
               <li className="text-gray-600">+66 83 8391 461</li>
               <li className="flex space-x-4 mt-4">
                 <Link href="https://line.me/ti/p/~@samuiwater" target="_blank" rel="noopener noreferrer">
-                  <img src="/images/line.png" alt="Line" className="h-6" />
+                  <Image src="/images/line.png" alt="Line" width={24} height={24} className="h-6" />
                 </Link>
                 <Link href="https://wa.me/66838391461" target="_blank" rel="noopener noreferrer">
-                  <img src="/images/whatsapp.png" alt="WhatsApp" className="h-6" />
+                  <Image src="/images/whatsapp.png" alt="WhatsApp" width={24} height={24} className="h-6" />
                 </Link>
                 <Link href="https://instagram.com/samuiwater" target="_blank" rel="noopener noreferrer">
-                  <img src="/images/instagram.png" alt="Instagram" className="h-6" />
+                  <Image src="/images/instagram.png" alt="Instagram" width={24} height={24} className="h-6" />
                 </Link>
               </li>
             </ul>
@@ -52,9 +52,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Payment Methods</h3>
               <div className="flex space-x-4 items-center">
-                <img src="/images/visa.png" alt="Visa" className="h-8" />
-                <img src="/images/mastercard.png" alt="Mastercard" className="h-8" />
-                <img src="/images/2c2p.png" alt="2C2P" className="h-4 w-8" />
+                <Image src="/images/visa.png" alt="Visa" width={32} height={32} className="h-8" />
+                <Image src="/images/mastercard.png" alt="Mastercard" width={32} height={32} className="h-8" />
+                <Image src="/images/2c2p.png" alt="2C2P" width={32} height={16} className="h-4 w-8" />
               </div>
             <p className="text-sm text-gray-500 mt-4">
               We use cookies to enhance your experience. Accept or adjust settings.

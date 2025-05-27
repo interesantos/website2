@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function ProductDetails({ product }: Props) {
-  const { cartItems, addToCart } = useCart();
+  const { addToCart } = useCart();
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
 
   useEffect(() => {

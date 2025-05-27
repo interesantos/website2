@@ -83,7 +83,13 @@ const products: Product[] = [
     category: 'subscription',
     isSubscription: true,
     subscriptionFrequency: 'weekly',
-    savings: 'Save 15%'
+    savings: 'Save 15%',
+    monthlyVolumeLiters: 72,
+    bottleSizeLiters: 1.5,
+    frequency: 'Weekly',
+    perDeliveryBottles: 12,
+    perMonthBottles: 48,
+    deliveryVolumeLiters: 18
   },
   {
     id: 'sub-monthly-1.5L',
@@ -94,7 +100,13 @@ const products: Product[] = [
     category: 'subscription',
     isSubscription: true,
     subscriptionFrequency: 'monthly',
-    savings: 'Save 25%'
+    savings: 'Save 25%',
+    monthlyVolumeLiters: 90,
+    bottleSizeLiters: 1.5,
+    frequency: 'Monthly',
+    perDeliveryBottles: 60,
+    perMonthBottles: 60,
+    deliveryVolumeLiters: 90
   }
 ];
 

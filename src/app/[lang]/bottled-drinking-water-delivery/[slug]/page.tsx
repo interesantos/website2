@@ -1,22 +1,23 @@
 import { notFound } from 'next/navigation';
-import { Product } from '@/types/products';
 import { getProductBySlug, getAllProducts } from '@/lib/products';
 import ProductDetails from '@/components/products/ProductDetails';
 import ProductSchema from '@/components/seo/ProductSchema';
+import { use } from 'react';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ lang: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
   const products = await getAllProducts();
   return products.map((product) => ({
+    lang: 'en', // Default language for static generation
     slug: generateSlug(product.name),
   }));
 }
 
 export default async function ProductPage({ params }: PageProps) {
-  const { slug } = params;
+  const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) return notFound();
 

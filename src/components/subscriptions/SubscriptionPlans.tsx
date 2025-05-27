@@ -1,14 +1,16 @@
 'use client';
 
-import { use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
-import { useEffect, useState } from 'react';
 
-export default function SubscriptionPlans({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = use(params);
-  const { cartItems, addToCart, setClickedItem } = useCart();
+interface SubscriptionPlansProps {
+  params: { lang: string };
+}
+
+export default function SubscriptionPlans({ params }: SubscriptionPlansProps) {
+  const { lang } = params;
+  const { addToCart, setClickedItem } = useCart();
 
   const plans = [
     // Monthly Subscriptions (90L total)

@@ -3,14 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { useEffect, useState } from 'react';
 
 interface ProductHighlightsProps {
   lang: string;
 }
 
 export default function ProductHighlights({ lang }: ProductHighlightsProps) {
-  const { cartItems, addToCart, setClickedItem } = useCart();
+  const { addToCart, setClickedItem } = useCart();
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
