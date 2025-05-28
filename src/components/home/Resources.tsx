@@ -22,7 +22,7 @@ export default function Resources() {
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">Refreshment for Your Island Adventures</h3>
               <p className="text-gray-700">
-                Make your 7–14 day Koh Samui trip unforgettable with our 1,5L bottles. Perfect for hiking, beach days, or temple visits, these FDA-approved bottles keep you hydrated on the go. Order a 7-day pack and have it delivered to your hotel or Airbnb in just 24–48 hours, so you can explore without worry.
+                Make your 7–14 day Koh Samui trip unforgettable with our 1,5L bottles. Perfect for hiking, beach days, or temple visits, these TFDA-approved bottles keep you hydrated on the go. Order a 7-day pack and have it delivered to your hotel or Airbnb in just 24–48 hours, so you can explore without worry.
               </p>
             </div>
           </Link>

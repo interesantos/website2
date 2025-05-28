@@ -3,7 +3,7 @@ import { Product } from '@/types/products';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 
 interface Props {
   products: Product[];
@@ -12,6 +12,7 @@ interface Props {
 
 export default function RelatedProducts({ products, currentProductId }: Props) {
   const { addToCart } = useCart();
+  const router = useRouter();
   const { lang } = useParams();
   const filteredProducts = products.filter(p => p.id !== currentProductId).slice(0, 5);
 
@@ -46,7 +47,10 @@ export default function RelatedProducts({ products, currentProductId }: Props) {
                       {product.price} THB / Month
                     </p>
                     <button
-                      onClick={() => addToCart(product)}
+                      onClick={() => {
+                        addToCart(product);
+                        router.push('/cart');
+                      }}
                       className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium"
                     >
                       Add to Cart

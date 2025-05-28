@@ -7,7 +7,7 @@ export default function HowItWorks() {
         <h2 className="text-3xl text-center mb-12">Hydration Made Simple in 3 Easy Steps</h2>
         
         <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto text-center">
-          At SamuiWater.com, we've eliminated the hassle of getting safe water in Koh Samui, so you can focus on enjoying your vacation or expat life. Our English-friendly platform is built for foreigners, offering a seamless way to order FDA-approved bottled water from trusted brands.
+          At SamuiWater.com, we've eliminated the hassle of getting safe water in Koh Samui, so you can focus on enjoying your vacation or expat life. Our English-friendly platform is built for foreigners, offering a seamless way to order TFDA-approved bottled water from trusted brands.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -18,7 +18,7 @@ export default function HowItWorks() {
             </div>
             <h3 className="text-xl font-semibold mb-2">1. Choose Your Perfect Pack</h3>
             <p className="text-gray-700">
-              Browse our 7-day packs for short trips, 5-packs for 14-day stays, or subscriptions for expats. Every option is FDA-approved for your safety.
+              Browse our 7-day packs for short trips, 5-packs for 14-day stays, or subscriptions for expats. Every option is TFDA-approved for your safety.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function HowItWorks() {
             </div>
             <h3 className="text-xl font-semibold mb-2">3. Relax with Fast Delivery</h3>
             <p className="text-gray-700">
-              Your water arrives at your hotel, villa, or home in 24–48 hours, handled by our reliable FDA-licensed delivery partners. Sit back, sip, and enjoy Koh Samui!
+              Your water arrives at your hotel, villa, or home in 24–48 hours, handled by our reliable TFDA-licensed delivery partners. Sit back, sip, and enjoy Koh Samui!
             </p>
           </div>
         </div>

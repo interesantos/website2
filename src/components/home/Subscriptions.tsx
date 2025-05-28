@@ -3,16 +3,18 @@
 import { useCart } from '@/context/CartContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function Subscriptions() {
   const { cartItems, addToCart, setClickedItem } = useCart();
+  const router = useRouter();
 
   const plans = [
     // Monthly Subscriptions (90L total)
     {
       id: 'subscription-monthly-0.5L',
       name: 'Monthly 90L Delivery Subscription (0.5L x 180 Bottles)',
-      description: 'For households & families: 90L of premium FDA-approved water delivered monthly to your Koh Samui home/villa',
+      description: 'For households & families: 90L of premium TFDA-approved water delivered monthly to your Koh Samui home/villa',
       price: 800,
       savings: 'Save 20%',
       image: '/images/30-days-2.webp'
@@ -66,7 +68,12 @@ export default function Subscriptions() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl text-center mb-12">Flexible Subscriptions for Koh Samui Living</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto text-center">
+Enjoy the convenience of regular deliveries and save up to 30% with our premium water subscriptions.
+        All plans include free delivery to your Koh Samui location and <strong>can be paused or canceled anytime</strong>.
+        We partner with top brands to deliver unmatched quality, backed by fast 24–48 hour delivery.        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {plans.map((plan) => (
             <div key={plan.id} className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
               <div className="relative h-48 bg-white mb-4 rounded-lg overflow-hidden">
@@ -102,7 +109,7 @@ export default function Subscriptions() {
                 </Link>
               </h3>
               <p className="text-blue-600 text-xl font-bold mb-4">{plan.price} THB / Month</p>
-              <p className="text-gray-700 mb-4 line-clamp-2">{plan.description}</p>
+              <p className="text-gray-700 mb-4 line-clamp-6">{plan.description}</p>
               <button
                 onClick={() => {
                   addToCart({
@@ -114,6 +121,7 @@ export default function Subscriptions() {
                     subscriptionFrequency: plan.id.includes('weekly') ? 'weekly' : 'monthly'
                   });
                   setClickedItem(plan.id);
+                  router.push('/cart');
                 }}
                 className={`w-full px-6 py-3 rounded-md cursor-pointer font-semibold ${
                   cartItems.some(item => item.id === plan.id)
@@ -121,7 +129,7 @@ export default function Subscriptions() {
                     : 'bg-blue-600 text-white hover:bg-blue-700'
                 }`}
               >
-                Subscribe Now
+                Add to Cart
               </button>
             </div>
           ))}

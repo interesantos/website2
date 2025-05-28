@@ -10,7 +10,7 @@ interface HeroProps {
 
 export default function Hero({
   headline = "Pure Water, Delivered Seamlessly to Your Koh Samui Stay",
-  subheadline = "Enjoy safe, FDA-approved bottled water from trusted brands, delivered to your hotel, villa, or home in 24–48 hours. Perfect for 7–14 day vacations or expat life, our English-friendly service offers one-time orders and flexible subscriptions, backed by secure payments and dedicated support. Stay hydrated with ease and confidence.",
+  subheadline = "Enjoy safe, TFDA-approved bottled water from trusted brands, delivered to your hotel, villa, or home in 24–48 hours. Perfect for 7–14 day vacations or expat life, <strong>our English-friendly service</strong> offers one-time orders and flexible subscriptions, backed by secure payments and dedicated support. Stay hydrated with ease and confidence.",
   showButtons = true,
   lang = 'en'
 }: HeroProps) {
@@ -35,9 +35,10 @@ export default function Hero({
           <h1 className="text-4xl md:text-5xl text-gray-900 mb-4 font-normal">
             {headline}
           </h1>
-          <p className="text-xl text-gray-700 mb-8">
-            {subheadline}
-          </p>
+          <p
+            className="text-xl text-gray-700 mb-8"
+            dangerouslySetInnerHTML={{ __html: subheadline }}
+          />
           {showButtons && (
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -66,15 +67,15 @@ export default function Hero({
               </li>
               <li className="flex items-center">
                 <span className="text-2xl font-bold text-blue-600 mr-2">✓</span>
-                <span className="text-gray-700">FDA-Licensed Suppliers for Guaranteed Safety</span>
+                <span className="text-gray-700">TFDA-Licensed Suppliers for Guaranteed Safety</span>
               </li>
               <li className="flex items-center">
                 <span className="text-2xl font-bold text-blue-600 mr-2">🔒</span>
-                <span className="text-gray-700">Secure Checkout with 2C2P Encryption</span>
+                <span className="text-gray-700">Secure Checkout with Visa and Mastercard</span>
               </li>
               <li className="flex items-center">
                 <span className="text-2xl font-bold text-blue-600 mr-2">✓</span>
-                <span className="text-gray-700">Registered with ETDA for Your Peace of Mind</span>
+                <span className="text-gray-700">Water delivered even if you're away</span>
               </li>
             </ul>
           </div>

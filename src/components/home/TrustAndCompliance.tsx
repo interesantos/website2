@@ -16,7 +16,7 @@ export default function TrustAndCompliance() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>FDA-certified suppliers</span>
+                  <span>TFDA-certified suppliers</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>

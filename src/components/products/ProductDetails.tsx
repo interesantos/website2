@@ -2,6 +2,7 @@
 import { Product } from '@/types/products';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
+import { useRouter } from 'next/navigation';
 import { getAllProducts } from '@/lib/products';
 import RelatedProducts from './RelatedProducts';
 import { useEffect, useState } from 'react';
@@ -12,6 +13,7 @@ interface Props {
 
 export default function ProductDetails({ product }: Props) {
   const { addToCart } = useCart();
+  const router = useRouter();
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -87,7 +89,10 @@ export default function ProductDetails({ product }: Props) {
             {/* CTA Section */}
             <div className="space-y-4">
               <button
-                onClick={() => addToCart(product)}
+                onClick={() => {
+                  addToCart(product);
+                  router.push('/cart');
+                }}
                 className="w-full px-6 py-4 rounded-lg font-bold bg-blue-600 text-white hover:bg-blue-700 text-lg"
               >
                 Add to Cart

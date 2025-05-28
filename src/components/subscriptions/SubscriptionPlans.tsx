@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
+import { useRouter } from 'next/navigation';
 
 interface SubscriptionPlansProps {
   params: { lang: string };
@@ -11,13 +12,14 @@ interface SubscriptionPlansProps {
 export default function SubscriptionPlans({ params }: SubscriptionPlansProps) {
   const { lang } = params;
   const { addToCart, setClickedItem } = useCart();
+  const router = useRouter();
 
   const plans = [
     // Monthly Subscriptions (90L total)
     {
       id: 'subscription-monthly-0.5L',
       name: 'Monthly 90L Delivery Subscription (0.5L x 180 Bottles)',
-      description: 'For households & families: 90L of premium FDA-approved water delivered monthly to your Koh Samui home/villa',
+      description: 'For households & families: 90L of premium TFDA-approved water delivered monthly to your Koh Samui home/villa',
       price: 800,
       savings: 'Save 20%',
       image: '/images/30-days-2.webp',
@@ -144,10 +146,11 @@ export default function SubscriptionPlans({ params }: SubscriptionPlansProps) {
                   subscriptionFrequency: plan.id.includes('weekly') ? 'weekly' : 'monthly'
                 });
                 setClickedItem(plan.id);
+                router.push('/cart');
               }}
               className="w-full py-2 px-4 rounded transition font-semibold cursor-pointer bg-blue-600 text-white hover:bg-blue-700"
             >
-              Subscribe Now
+              Add to Cart
             </button>
           </div>
         ))}

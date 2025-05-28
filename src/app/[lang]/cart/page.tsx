@@ -1,5 +1,7 @@
 'use client';
 
+import { use } from 'react';
+
 import { useState, useEffect } from 'react';
 import PaymentModal from '@/components/cart/PaymentModal';
 import { useCart } from '@/context/CartContext';
@@ -9,7 +11,8 @@ import DeliveryAddress from '@/components/cart/DeliveryAddress';
 import ReceiptEmail from '@/components/cart/ReceiptEmail';
 import CartSchema from '@/components/seo/CartSchema';
 
-export default function CartPage() {
+export default function CartPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = use(params);
   const { cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [receiptEmail, setReceiptEmail] = useState('');
@@ -21,7 +24,7 @@ export default function CartPage() {
   const handlePaymentSubmit = () => {
     setShowPaymentModal(false);
     // Process payment logic would go here
-    alert('Payment submitted successfully!');
+    alert('Payment Gate is not responding, try later');
   };
 
   useEffect(() => {
@@ -46,7 +49,7 @@ export default function CartPage() {
         <div className="text-center py-12">
           <p className="text-xl mb-4">Your cart is empty</p>
           <Link 
-            href="/shop" 
+            href={`/${lang}/bottled-drinking-water-delivery`}
             className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
           >
             Shop Now
@@ -69,7 +72,7 @@ export default function CartPage() {
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div>
+                      <div className="min-w-[200px]">
                         <h3 className="text-lg font-medium">
                           {item.name}
                           {item.isSubscription && (

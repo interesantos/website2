@@ -11,7 +11,7 @@ export default function ContactPage() {
         telephone="+66 83 8391 461"
         email="support@samuiwater.com"
         address="9 Moo 1, Bophut, Koh Samui, Surat Thani 84320, Thailand"
-        openingHours="Mo-Sa 09:00-18:00"
+        openingHours="Mo-Su 09:00-18:00"
         image="/images/logo.png"
       />
       <main>
@@ -38,8 +38,8 @@ export default function ContactPage() {
                 <p>9 Moo 1, Bophut, Koh Samui, Surat Thani 84320, Thailand</p>
               </div>
               <div>
-                <h3 className="font-semibold">Business Hours</h3>
-                <p>Monday-Saturday: 9:00 AM - 6:00 PM</p>
+                <h3 className="font-semibold">Delivery Hours</h3>
+                <p>Monday-Sunday: 9:00 AM - 6:00 PM</p>
               </div>
             </div>
           </div>

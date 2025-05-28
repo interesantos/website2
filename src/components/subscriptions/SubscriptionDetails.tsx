@@ -2,6 +2,7 @@
 import { SubscriptionProduct } from '@/types/products';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
+import { useRouter } from 'next/navigation';
 import RelatedProducts from '../products/RelatedProducts';
 import { useEffect, useState } from 'react';
 
@@ -11,6 +12,7 @@ interface Props {
 
 export default function SubscriptionDetails({ subscription }: Props) {
   const { addToCart } = useCart();
+  const router = useRouter();
   const [relatedSubscriptions, setRelatedSubscriptions] = useState<SubscriptionProduct[]>([]);
 
   useEffect(() => {
@@ -186,7 +188,10 @@ export default function SubscriptionDetails({ subscription }: Props) {
 
             <div className="space-y-4">
               <button
-                onClick={() => addToCart(subscription)}
+                onClick={() => {
+                  addToCart(subscription);
+                  router.push('/cart');
+                }}
                 className="w-full px-6 py-4 rounded-lg font-bold bg-blue-600 text-white hover:bg-blue-700 text-lg"
               >
                 Add to Cart
