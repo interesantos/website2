@@ -126,7 +126,7 @@ export default function Header({ params }: { params: { lang: string } }) {
 
         {/* Cart */}
         <div className="ml-4">
-          <Link href="/[lang]/cart" as={`/${params.lang}/cart`} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 whitespace-nowrap">
+          <Link href="/[lang]/cart" as={`/${params.lang}/cart`} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 whitespace-nowrap font-bold">
             Cart ({itemCount})
           </Link>
         </div>
