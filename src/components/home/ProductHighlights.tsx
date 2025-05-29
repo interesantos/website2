@@ -43,7 +43,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               Ideal for 7-day Koh Samui getaways, this pack delivers 12 1,5L bottles—perfect for solo travelers or couples exploring beaches, markets, or waterfalls. TFDA-approved and lightweight, it's your go-to for safe hydration. Delivered to your hotel or Airbnb in 24–48 hours.
             </p>
             <button 
-              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center"
+              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center whitespace-nowrap"
               onClick={() => {
                 addToCart({
                   id: 'product-1.5L-7day',
@@ -80,7 +80,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               Great for 7-day vacations, these 0,5L bottles are compact and portable, keeping you hydrated during island tours or poolside lounging. Sourced from TFDA-licensed suppliers, they ensure safety and quality. Get them delivered to your accommodation with ease.
             </p>
             <button 
-              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center"
+              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center whitespace-nowrap"
               onClick={() => {
                 addToCart({
                   id: 'product-0.5L-7day',
@@ -117,7 +117,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               Ideal for 14-day Koh Samui getaways, this pack delivers 30 1,5L bottles—perfect for solo travelers or couples exploring beaches, markets, or waterfalls. TFDA-approved and lightweight, it's your go-to for safe hydration. Delivered to your hotel or Airbnb in 24–48 hours.
             </p>
             <button 
-              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center"
+              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center whitespace-nowrap"
               onClick={() => {
                 addToCart({
                   id: 'product-1.5L-14day',
@@ -154,7 +154,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               Great for 14-day vacations, these 0,5L bottles are compact and portable, keeping you hydrated during island tours or poolside lounging. Sourced from TFDA-licensed suppliers, they ensure safety and quality. Get them delivered to your accommodation with ease.
             </p>
             <button 
-              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center"
+              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center whitespace-nowrap"
               onClick={() => {
                 addToCart({
                   id: 'product-0.5L-14day',
@@ -191,7 +191,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               Perfect for long-term stays, this monthly pack delivers 60 1,5L bottles—ideal for expats or long-term visitors. TFDA-approved and delivered on a recurring schedule, it ensures you never run out of safe hydration. Save 25% compared to one-time orders.
             </p>
             <button 
-              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center"
+              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center whitespace-nowrap"
               onClick={() => {
                 addToCart({
                   id: 'product-1.5L-30day',
@@ -228,7 +228,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               Compact and convenient for long-term stays, this monthly pack delivers 180 0,5L bottles—perfect for expats or long-term visitors who prefer smaller bottles. TFDA-approved and delivered on a recurring schedule, ensuring you always have portable hydration.
             </p>
             <button 
-              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center"
+              className="w-full px-4 py-3 rounded-md cursor-pointer font-semibold bg-blue-600 text-white hover:bg-blue-700 text-center whitespace-nowrap"
               onClick={() => {
                 addToCart({
                   id: 'product-0.5L-30day',

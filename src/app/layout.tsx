@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Samui Water Delivery",
     images: [
       {
-        url: "https://samuiwater.com/_next/image?url=%2Fimages%2Fcheckout_laptop-min.webp",
+        url: "https://samuiwater.com/images/checkout_laptop-min.webp",
         width: 1200,
         height: 630,
         alt: "Checkout process on SamuiWater.com",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SamuiWater.com - Pure Bottled Water Delivery in Koh Samui",
     description: "TFDA-approved bottled water delivered to your hotel, villa, Airbnb or home in Koh Samui. Perfect for tourists and expats.",
-    images: ["https://samuiwater.com/_next/image?url=%2Fimages%2Fcheckout_laptop-min.webp"],
+    images: ["https://samuiwater.com/images/checkout_laptop-min.webp"],
   },
 };
 
