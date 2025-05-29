@@ -60,7 +60,7 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="divide-y divide-gray-200">
-                {cartItems.map((item) => (
+                {[...cartItems].sort((a, b) => Number(b.isSubscription) - Number(a.isSubscription)).map((item) => (
                   <div key={item.id} className="p-2 flex justify-between items-center">
                     <div className="flex items-center space-x-4 w-full max-w-[calc(100%-120px)]">
                       <div className="w-16 h-16 sm:w-12 sm:h-12 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
@@ -73,14 +73,16 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
                         />
                       </div>
                       <div className="min-w-[80px] sm:min-w-[200px]">
-                        <h3 className="text-lg font-medium">
-                          {item.name}
+                        <div className="flex flex-col gap-1">
+                          <h3 className="text-lg font-medium">
+                            {item.name}
+                          </h3>
                           {item.isSubscription && (
-                            <span className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
+                            <span className="text-sm bg-green-100 text-green-800 px-2 py-1 rounded self-start">
                               Subscription
                             </span>
                           )}
-                        </h3>
+                        </div>
                         <p className="text-gray-600">
                           {item.price} THB
                           {item.isSubscription && ' / month'}
