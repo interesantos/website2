@@ -27,7 +27,8 @@ export default function SubscriptionsPage({ params, searchParams }: PageProps) {
     frequency: 'monthly',
     perDeliveryBottles: 3,
     perMonthBottles: 3,
-    deliveryVolumeLiters: 60
+    deliveryVolumeLiters: 60,
+    bottleCount: '3 Bottles'
   } as const;
 
   return (

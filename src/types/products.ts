@@ -25,6 +25,7 @@ export interface SubscriptionProduct extends BaseProduct {
   perDeliveryBottles: number;
   perMonthBottles: number;
   deliveryVolumeLiters: number;
+  bottleCount: string;
 }
 
 export type Product = WaterProduct | SubscriptionProduct;

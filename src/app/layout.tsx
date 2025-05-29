@@ -12,8 +12,30 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "SamuiWater.com - Pure Water Delivery in Koh Samui",
-  description: "FDA-approved bottled water delivered to your hotel, villa, or home in Koh Samui. Perfect for tourists and expats.",
+  title: "SamuiWater.com - Pure Bottled Water Delivery in Koh Samui",
+  description: "TFDA-approved bottled water delivered to your hotel, villa, Airbnb or home in Koh Samui. Perfect for tourists and expats.",
+  openGraph: {
+    title: "SamuiWater.com - Pure Bottled Water Delivery in Koh Samui",
+    description: "TFDA-approved bottled water delivered to your hotel, villa, Airbnb or home in Koh Samui. Perfect for tourists and expats.",
+    url: "https://samuiwater.com",
+    siteName: "Samui Water Delivery",
+    images: [
+      {
+        url: "/images/checkout_laptop-min.webp",
+        width: 1200,
+        height: 630,
+        alt: "Checkout process on SamuiWater.com",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SamuiWater.com - Pure Bottled Water Delivery in Koh Samui",
+    description: "TFDA-approved bottled water delivered to your hotel, villa, Airbnb or home in Koh Samui. Perfect for tourists and expats.",
+    images: ["/images/checkout_laptop-min.webp"],
+  },
 };
 
 export default function RootLayout({

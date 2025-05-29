@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import ArticleSchema from '@/components/seo/ArticleSchema';
+import RelatedResources from '@/components/resources/RelatedResources';
 
 const posts = [
   {
@@ -10,6 +11,7 @@ const posts = [
       <p>Make your 7–14 day Koh Samui trip unforgettable with our 1,5L bottles. Perfect for hiking, beach days, or temple visits, these FDA-approved bottles keep you hydrated on the go.</p>
       <p>Order a 7-day pack and have it delivered to your hotel or Airbnb in just 24–48 hours, so you can explore without worry.</p>
     `,
+    excerpt: "Make your 7–14 day Koh Samui trip unforgettable with our 1,5L bottles. Perfect for hiking, beach days, or temple visits...",
     date: "2025-05-15",
     image: "/images/happy_tourist-min.webp",
     slug: "refreshment-for-your-island-adventures"
@@ -21,6 +23,7 @@ const posts = [
       <p>Staying in a Koh Samui villa for a week or two? Our 1,5L bottles provide ample safe water for drinking, cooking, or entertaining.</p>
       <p>Delivered directly to your door, they save you time and effort, letting you focus on relaxing in paradise with family or friends.</p>
     `,
+    excerpt: "Staying in a Koh Samui villa for a week or two? Our 1,5L bottles provide ample safe water for drinking, cooking, or entertaining...",
     date: "2025-05-15",
     image: "/images/smiling_couple-min.webp",
     slug: "pure-water-for-your-vacation-home"
@@ -32,6 +35,7 @@ const posts = [
       <p>Living in Koh Samui? Our subscriptions deliver 90L of premium water monthly, tailored to your expat lifestyle.</p>
       <p>Save up to 25% and enjoy the convenience of never running out. Customize your plan to fit your household, from small condos to large homes.</p>
     `,
+    excerpt: "Living in Koh Samui? Our subscriptions deliver 90L of premium water monthly, tailored to your expat lifestyle...",
     date: "2025-05-15",
     image: "/images/delivery_person-min.webp",
     slug: "stress-free-subscriptions-for-expats"
@@ -43,6 +47,7 @@ const posts = [
       <p>Order with ease using our secure, English-friendly website. Pay via Visa, Mastercard, or bank transfer through our encrypted 2C2P gateway, trusted by millions.</p>
       <p>Your data is protected under Thailand's PDPA, and our English support team is here to assist via Line or email.</p>
     `,
+    excerpt: "Order with ease using our secure, English-friendly website. Pay via Visa, Mastercard, or bank transfer through our encrypted 2C2P gateway...",
     date: "2025-05-15",
     image: "/images/checkout_laptop-min.webp",
     slug: "shop-with-total-confidence"
@@ -66,7 +71,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         image={post.image}
       />
       <div className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4">
         <article>
           <div className="mb-8">
             <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
@@ -87,6 +92,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </article>
+      </div>
+    </div>
+    <div className="bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <RelatedResources
+          articles={posts.filter(p => p.id !== post.id)}
+          currentArticleId={post.id}
+        />
       </div>
     </div>
     </>

@@ -3,7 +3,7 @@ import { SubscriptionProduct } from '@/types/products';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
 import { useRouter } from 'next/navigation';
-import RelatedProducts from '../products/RelatedProducts';
+import RelatedSubscriptions from './RelatedSubscriptions';
 import { useEffect, useState } from 'react';
 
 interface Props {
@@ -20,104 +20,110 @@ export default function SubscriptionDetails({ subscription }: Props) {
       {
         id: 'subscription-monthly-0.5L',
         name: 'Monthly 90L Delivery Subscription (0.5L x 180 Bottles)',
-        description: 'Get 180 bottles of 0.5L delivered monthly',
+        description: 'For households & families: 90L of premium TFDA-approved water delivered monthly to your Koh Samui home/villa',
         price: 800,
         image: '/images/30-days-2.webp',
         category: 'subscription',
         isSubscription: true,
         subscriptionFrequency: 'monthly',
-        savings: 'Save 10%',
+        savings: 'Save 20%',
         monthlyVolumeLiters: 90,
         bottleSizeLiters: 0.5,
         frequency: 'Monthly',
         perDeliveryBottles: 180,
         perMonthBottles: 180,
-        deliveryVolumeLiters: 90
+        deliveryVolumeLiters: 90,
+        bottleCount: '180 Bottles'
       },
       {
         id: 'subscription-monthly-1.5L',
         name: 'Monthly 90L Delivery Subscription (1.5L x 60 Bottles)',
-        description: 'Get 60 bottles of 1.5L delivered monthly',
+        description: 'Households & families: 90L of high-quality bottled water delivered monthly to your Koh Samui residence/villa',
         price: 800,
         image: '/images/30-days-1.webp',
         category: 'subscription',
         isSubscription: true,
         subscriptionFrequency: 'monthly',
-        savings: 'Save 10%',
+        savings: 'Save 20%',
         monthlyVolumeLiters: 90,
         bottleSizeLiters: 1.5,
         frequency: 'Monthly',
         perDeliveryBottles: 60,
         perMonthBottles: 60,
-        deliveryVolumeLiters: 90
+        deliveryVolumeLiters: 90,
+        bottleCount: '60 Bottles'
       },
       {
         id: 'subscription-every-two-weeks-0.5L',
         name: 'Every Two Weeks 45L Delivery Subscription (0.5L x 90 Bottles)',
-        description: 'Get 90 bottles of 0.5L delivered every two weeks',
+        description: 'Couples & small families: 45L of pure, safe bottled water delivered every two weeks to your Koh Samui location',
         price: 900,
         image: '/images/14-days-2.webp',
         category: 'subscription',
         isSubscription: true,
         subscriptionFrequency: 'bi-weekly',
-        savings: 'Save 5%',
+        savings: 'Save 25%',
         monthlyVolumeLiters: 90,
         bottleSizeLiters: 0.5,
         frequency: 'Every Two Weeks',
         perDeliveryBottles: 90,
         perMonthBottles: 180,
-        deliveryVolumeLiters: 45
+        deliveryVolumeLiters: 45,
+        bottleCount: '90 Bottles'
       },
       {
         id: 'subscription-every-two-weeks-1.5L',
         name: 'Every Two Weeks 45L Delivery Subscription (1.5L x 30 Bottles)',
-        description: 'Get 30 bottles of 1.5L delivered every two weeks',
+        description: 'Couples & small households: 45L of premium quality water delivered bi-weekly to your Koh Samui accommodation',
         price: 900,
         image: '/images/14-days-1.webp',
         category: 'subscription',
         isSubscription: true,
         subscriptionFrequency: 'bi-weekly',
-        savings: 'Save 5%',
+        savings: 'Save 25%',
         monthlyVolumeLiters: 90,
         bottleSizeLiters: 1.5,
         frequency: 'Every Two Weeks',
         perDeliveryBottles: 30,
         perMonthBottles: 60,
-        deliveryVolumeLiters: 45
+        deliveryVolumeLiters: 45,
+        bottleCount: '30 Bottles'
       },
       {
         id: 'subscription-weekly-0.5L',
         name: 'Weekly 18L Delivery Subscription (0.5L x 36 Bottles)',
-        description: 'Get 36 bottles of 0.5L delivered weekly',
+        description: 'Individuals: 18L of fresh, clean bottled water delivered weekly to your Koh Samui hotel/villa/apartment',
         price: 1100,
         image: '/images/7-days-2.webp',
         category: 'subscription',
         isSubscription: true,
         subscriptionFrequency: 'weekly',
-        savings: 'Save 2%',
+        savings: 'Save 30%',
         monthlyVolumeLiters: 72,
         bottleSizeLiters: 0.5,
         frequency: 'Weekly',
         perDeliveryBottles: 36,
         perMonthBottles: 144,
-        deliveryVolumeLiters: 18
+        deliveryVolumeLiters: 18,
+        bottleCount: '36 Bottles'
       },
       {
         id: 'subscription-weekly-1.5L',
         name: 'Weekly 18L Delivery Subscription (1.5L x 12 Bottles)',
-        description: 'Get 12 bottles of 1.5L delivered weekly',
+        description: 'Single users: 18L of high-quality drinking water delivered weekly to your Koh Samui residence/vacation rental',
         price: 1100,
         image: '/images/7-days-1.webp',
         category: 'subscription',
         isSubscription: true,
         subscriptionFrequency: 'weekly',
-        savings: 'Save 2%',
+        savings: 'Save 30%',
         monthlyVolumeLiters: 72,
         bottleSizeLiters: 1.5,
         frequency: 'Weekly',
         perDeliveryBottles: 12,
         perMonthBottles: 48,
-        deliveryVolumeLiters: 18
+        deliveryVolumeLiters: 18,
+        bottleCount: '12 Bottles'
       }
     ];
 
@@ -208,9 +214,9 @@ export default function SubscriptionDetails({ subscription }: Props) {
       </div>
 
       {relatedSubscriptions.length > 0 && (
-        <RelatedProducts 
-          products={relatedSubscriptions}
-          currentProductId={subscription.id}
+        <RelatedSubscriptions
+          subscriptions={relatedSubscriptions}
+          currentSubscriptionId={subscription.id}
         />
       )}
     </div>

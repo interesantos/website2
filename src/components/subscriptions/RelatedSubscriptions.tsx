@@ -1,5 +1,5 @@
 'use client';
-import { Product } from '@/types/products';
+import { SubscriptionProduct } from '@/types/products';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
@@ -8,15 +8,15 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Props {
-  products: Product[];
-  currentProductId: string;
+  subscriptions: SubscriptionProduct[];
+  currentSubscriptionId: string;
 }
 
-export default function RelatedProducts({ products, currentProductId }: Props) {
+export default function RelatedSubscriptions({ subscriptions, currentSubscriptionId }: Props) {
   const { addToCart } = useCart();
   const router = useRouter();
   const { lang } = useParams();
-  const filteredProducts = products.filter(p => p.id !== currentProductId).slice(0, 5);
+  const filteredSubscriptions = subscriptions.filter(s => s.id !== currentSubscriptionId).slice(0, 5);
   const containerRef = useRef<HTMLDivElement>(null);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
@@ -50,7 +50,7 @@ export default function RelatedProducts({ products, currentProductId }: Props) {
 
   return (
     <div className="mt-12 px-4 relative">
-      <h2 className="text-2xl font-bold mb-6">Related Products</h2>
+      <h2 className="text-2xl font-bold mb-6">Related Subscriptions</h2>
       <div className="relative">
         {showLeftButton && (
           <button
@@ -72,49 +72,43 @@ export default function RelatedProducts({ products, currentProductId }: Props) {
         )}
         <div className="overflow-x-auto pb-4 scrollbar-hide" ref={containerRef}>
           <div className="flex gap-4 md:gap-6 w-max">
-            {filteredProducts.map((product) => {
-              const productRoute = product.category === 'water'
-                ? `/${lang}/bottled-drinking-water-delivery/${product.name.toLowerCase()
-                    .replace(/[^\w\s-]/g, '')
-                    .replace(/\s+/g, '-')
-                    .replace(/-+/g, '-')
-                    .replace(/\(/g, '')
-                    .replace(/\)/g, '')}`
-                : `/${lang}/bottled-drinking-water-delivery-subscription/${product.name.toLowerCase()
-                    .replace(/[^\w\s-]/g, '')
-                    .replace(/\s+/g, '-')
-                    .replace(/-+/g, '-')
-                    .replace(/\(/g, '')
-                    .replace(/\)/g, '')}`;
+            {filteredSubscriptions.map((subscription) => {
+              const subscriptionRoute = `/${lang}/bottled-drinking-water-delivery-subscription/${subscription.name.toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/\(/g, '')
+                .replace(/\)/g, '')}`;
 
               return (
-                <div key={product.id} className="w-72 md:w-80 flex-shrink-0 bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                  <Link href={productRoute} className="block mb-4">
+                <div key={subscription.id} className="w-72 md:w-80 flex-shrink-0 bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                  <Link href={subscriptionRoute} className="block mb-4">
                     <div className="relative h-48 overflow-hidden rounded-lg">
                       <Image
-                        src={product.image.startsWith('/') ? product.image : `/images/${product.image}`}
-                        alt={product.name}
+                        src={subscription.image.startsWith('/') ? subscription.image : `/images/${subscription.image}`}
+                        alt={subscription.name}
                         fill
                         className="object-cover"
                       />
+                      <span className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                        {subscription.savings}
+                      </span>
                     </div>
                   </Link>
                   <div className="space-y-3">
                     <h3 className="text-lg font-semibold line-clamp-2">
-                      <Link href={productRoute} className="hover:text-blue-600 transition">
-                        {product.name}
+                      <Link href={subscriptionRoute} className="hover:text-blue-600 transition">
+                        {subscription.name}
                       </Link>
                     </h3>
-                    <p className="text-blue-600 text-xl font-bold">{product.price} THB</p>
-                    {product.description && (
-                      <p className="text-gray-700 line-clamp-2">{product.description}</p>
-                    )}
+                    <p className="text-blue-600 text-xl font-bold">{subscription.price} THB / Month</p>
+                    <p className="text-gray-700 line-clamp-2">{subscription.description}</p>
                     <button
                       onClick={() => {
-                        addToCart(product);
+                        addToCart(subscription);
                         router.push('/cart');
                       }}
-                      className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition"
+                      className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium"
                     >
                       Add to Cart
                     </button>

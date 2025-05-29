@@ -72,7 +72,7 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="min-w-[200px]">
+                      <div className="min-w-[80px] sm:min-w-[200px]">
                         <h3 className="text-lg font-medium">
                           {item.name}
                           {item.isSubscription && (
@@ -87,7 +87,7 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex flex-wrap items-center gap-y-4 gap-x-4 mt-2 justify-center">
                       <div className="flex items-center border rounded-md">
                         <button 
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}

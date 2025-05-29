@@ -89,7 +89,8 @@ const products: Product[] = [
     frequency: 'Weekly',
     perDeliveryBottles: 12,
     perMonthBottles: 48,
-    deliveryVolumeLiters: 18
+    deliveryVolumeLiters: 18,
+    bottleCount: '12 Bottles'
   },
   {
     id: 'sub-monthly-1.5L',
@@ -106,7 +107,8 @@ const products: Product[] = [
     frequency: 'Monthly',
     perDeliveryBottles: 60,
     perMonthBottles: 60,
-    deliveryVolumeLiters: 90
+    deliveryVolumeLiters: 90,
+    bottleCount: '60 Bottles'
   }
 ];
 

@@ -22,7 +22,8 @@ const subscriptionPlans: SubscriptionProduct[] = [
     subscriptionFrequency: 'monthly',
     perDeliveryBottles: 180,
     perMonthBottles: 180,
-    deliveryVolumeLiters: 90
+    deliveryVolumeLiters: 90,
+    bottleCount: '180 Bottles'
   },
   {
     id: 'subscription-monthly-1.5L',
@@ -39,7 +40,8 @@ const subscriptionPlans: SubscriptionProduct[] = [
     subscriptionFrequency: 'monthly',
     perDeliveryBottles: 60,
     perMonthBottles: 60,
-    deliveryVolumeLiters: 90
+    deliveryVolumeLiters: 90,
+    bottleCount: '60 Bottles'
   },
   {
     id: 'subscription-every-two-weeks-0.5L',
@@ -56,7 +58,8 @@ const subscriptionPlans: SubscriptionProduct[] = [
     subscriptionFrequency: 'bi-weekly',
     perDeliveryBottles: 90,
     perMonthBottles: 180,
-    deliveryVolumeLiters: 45
+    deliveryVolumeLiters: 45,
+    bottleCount: '90 Bottles'
   },
   {
     id: 'subscription-every-two-weeks-1.5L',
@@ -73,7 +76,8 @@ const subscriptionPlans: SubscriptionProduct[] = [
     subscriptionFrequency: 'bi-weekly',
     perDeliveryBottles: 30,
     perMonthBottles: 60,
-    deliveryVolumeLiters: 45
+    deliveryVolumeLiters: 45,
+    bottleCount: '30 Bottles'
   },
   {
     id: 'subscription-weekly-0.5L',
@@ -90,7 +94,8 @@ const subscriptionPlans: SubscriptionProduct[] = [
     subscriptionFrequency: 'weekly',
     perDeliveryBottles: 36,
     perMonthBottles: 144,
-    deliveryVolumeLiters: 18
+    deliveryVolumeLiters: 18,
+    bottleCount: '36 Bottles'
   },
   {
     id: 'subscription-weekly-1.5L',
@@ -107,7 +112,8 @@ const subscriptionPlans: SubscriptionProduct[] = [
     subscriptionFrequency: 'weekly',
     perDeliveryBottles: 12,
     perMonthBottles: 48,
-    deliveryVolumeLiters: 18
+    deliveryVolumeLiters: 18,
+    bottleCount: '12 Bottles'
   }
 ];
 
