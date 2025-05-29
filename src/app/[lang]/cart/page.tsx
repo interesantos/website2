@@ -72,8 +72,8 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-medium truncate">
+                      <div className="min-w-[80px] sm:min-w-[200px]">
+                        <h3 className="text-lg font-medium">
                           {item.name}
                           {item.isSubscription && (
                             <span className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
