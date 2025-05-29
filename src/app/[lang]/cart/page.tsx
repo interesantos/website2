@@ -62,18 +62,18 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
               <div className="divide-y divide-gray-200">
                 {cartItems.map((item) => (
                   <div key={item.id} className="p-6 flex justify-between items-center">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-gray-100 rounded-md overflow-hidden">
+                    <div className="flex items-center space-x-4 w-full">
+                      <div className="w-24 h-24 sm:w-16 sm:h-16 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src={item.image || '/images/placeholder-product.jpg'}
                           alt={item.name}
-                          width={64}
-                          height={64}
+                          width={96}
+                          height={96}
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="min-w-[80px] sm:min-w-[200px]">
-                        <h3 className="text-lg font-medium">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-medium truncate">
                           {item.name}
                           {item.isSubscription && (
                             <span className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
