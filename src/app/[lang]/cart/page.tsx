@@ -60,7 +60,7 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="divide-y divide-gray-200">
-                {[...cartItems].sort((a, b) => Number(b.isSubscription) - Number(a.isSubscription)).map((item) => (
+                {[...cartItems].sort((a, b) => b.isSubscription ? 1 : -1).map((item) => (
                   <div key={item.id} className="p-2 flex justify-between items-center">
                     <div className="flex items-center space-x-4 w-full max-w-[calc(100%-120px)]">
                       <div className="w-16 h-16 sm:w-12 sm:h-12 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">

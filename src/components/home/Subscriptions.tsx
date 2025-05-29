@@ -123,7 +123,7 @@ Enjoy the convenience of regular deliveries and save up to 30% with our premium 
                   setClickedItem(plan.id);
                   router.push('/cart');
                 }}
-                className={`w-full px-6 py-3 rounded-md cursor-pointer font-semibold whitespace-nowrap ${
+                className={`w-full px-4 py-3 rounded-md cursor-pointer font-semibold text-center ${
                   cartItems.some(item => item.id === plan.id)
                     ? 'bg-blue-600 text-white'
                     : 'bg-blue-600 text-white hover:bg-blue-700'
