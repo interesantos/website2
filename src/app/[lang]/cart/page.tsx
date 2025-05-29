@@ -61,14 +61,14 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="divide-y divide-gray-200">
                 {cartItems.map((item) => (
-                  <div key={item.id} className="p-6 flex justify-between items-center">
+                  <div key={item.id} className="p-2 flex justify-between items-center">
                     <div className="flex items-center space-x-4 w-full max-w-[calc(100%-120px)]">
-                      <div className="w-24 h-24 sm:w-16 sm:h-16 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
+                      <div className="w-16 h-16 sm:w-12 sm:h-12 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src={item.image || '/images/placeholder-product.jpg'}
                           alt={item.name}
-                          width={96}
-                          height={96}
+                          width={64}
+                          height={64}
                           className="object-cover w-full h-full"
                         />
                       </div>
@@ -91,14 +91,14 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
                       <div className="flex items-center border rounded-md">
                         <button 
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="px-3 py-1 text-gray-600 hover:bg-gray-100"
+                          className="px-2 py-1 text-gray-600 hover:bg-gray-100"
                         >
                           -
                         </button>
-                        <span className="px-3">{item.quantity}</span>
-                        <button 
+                        <span className="px-2">{item.quantity}</span>
+                        <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="px-3 py-1 text-gray-600 hover:bg-gray-100"
+                          className="px-2 py-1 text-gray-600 hover:bg-gray-100"
                         >
                           +
                         </button>
