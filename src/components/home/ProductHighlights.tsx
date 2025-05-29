@@ -23,8 +23,8 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {/* Card 1 */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="h-48 bg-white mb-4 rounded-lg overflow-hidden">
+          <div className="bg-blue-50 rounded-lg py-4">
+            <div className="h-48 bg-white rounded-lg overflow-hidden">
               <Link href={`/${lang}/bottled-drinking-water-delivery/${'7-Day 18L Pack (1.5L x 12 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
                 <Image
                   src="/images/7-days-1.webp"
@@ -36,7 +36,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               </Link>
             </div>
             <Link href={`/${lang}/bottled-drinking-water-delivery/${'7-Day 18L Pack (1.5L x 12 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition">7-Day 18L Pack (1.5L x 12 Bottles)</h3>
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition line-clamp-2 md:line-clamp-none">7-Day 18L Pack (1.5L x 12 Bottles)</h3>
             </Link>
             <p className="text-blue-600 text-xl font-bold mb-4">400 THB</p>
             <p className="text-gray-700 mb-4 line-clamp-6">
@@ -60,8 +60,8 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="h-48 bg-white mb-4 rounded-lg overflow-hidden">
+          <div className="bg-blue-50 rounded-lg py-4">
+            <div className="h-48 bg-white rounded-lg overflow-hidden">
               <Link href={`/${lang}/bottled-drinking-water-delivery/${'7-Day 18L Pack (0.5L x 36 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
                 <Image
                   src="/images/7-days-2.webp"
@@ -73,7 +73,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               </Link>
             </div>
             <Link href={`/${lang}/bottled-drinking-water-delivery/${'7-Day 18L Pack (0.5L x 36 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition">7-Day 18L Pack (0.5L x 36 Bottles)</h3>
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition line-clamp-2 md:line-clamp-none">7-Day 18L Pack (0.5L x 36 Bottles)</h3>
             </Link>
             <p className="text-blue-600 text-xl font-bold mb-4">400 THB</p>
             <p className="text-gray-700 mb-4 line-clamp-6">
@@ -97,8 +97,8 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="h-48 bg-white mb-4 rounded-lg overflow-hidden">
+          <div className="bg-blue-50 rounded-lg py-4">
+            <div className="h-48 bg-white rounded-lg overflow-hidden">
               <Link href={`/${lang}/bottled-drinking-water-delivery/${'14-Day 45L Pack (1.5L x 30 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
                 <Image
                   src="/images/14-days-1.webp"
@@ -110,7 +110,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               </Link>
             </div>
             <Link href={`/${lang}/bottled-drinking-water-delivery/${'14-Day 45L Pack (1.5L x 30 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition">14-Day 45L Pack (1.5L x 30 Bottles)</h3>
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition line-clamp-2 md:line-clamp-none">14-Day 45L Pack (1.5L x 30 Bottles)</h3>
             </Link>
             <p className="text-blue-600 text-xl font-bold mb-4">600 THB</p>
             <p className="text-gray-700 mb-4 line-clamp-6">
@@ -134,8 +134,8 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="h-48 bg-white mb-4 rounded-lg overflow-hidden">
+          <div className="bg-blue-50 rounded-lg py-4">
+            <div className="h-48 bg-white rounded-lg overflow-hidden">
               <Link href={`/${lang}/bottled-drinking-water-delivery/${'14-Day 45L Pack (0.5L x 90 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
                 <Image
                   src="/images/14-days-2.webp"
@@ -147,7 +147,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               </Link>
             </div>
             <Link href={`/${lang}/bottled-drinking-water-delivery/${'14-Day 45L Pack (0.5L x 90 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition">14-Day 45L Pack (0.5L x 90 Bottles)</h3>
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition line-clamp-2 md:line-clamp-none">14-Day 45L Pack (0.5L x 90 Bottles)</h3>
             </Link>
             <p className="text-blue-600 text-xl font-bold mb-4">600 THB</p>
             <p className="text-gray-700 mb-4 line-clamp-6">
@@ -171,8 +171,8 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
           </div>
 
           {/* Card 5 */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="h-48 bg-white mb-4 rounded-lg overflow-hidden">
+          <div className="bg-blue-50 rounded-lg py-4">
+            <div className="h-48 bg-white rounded-lg overflow-hidden">
               <Link href={`/${lang}/bottled-drinking-water-delivery/${'30-Day 90L Pack (1.5L x 60 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
                 <Image
                   src="/images/30-days-1.webp"
@@ -184,7 +184,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               </Link>
             </div>
             <Link href={`/${lang}/bottled-drinking-water-delivery/${'30-Day 90L Pack (1.5L x 60 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition">30-Day 90L Pack (1.5L x 60 Bottles)</h3>
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition line-clamp-2 md:line-clamp-none">30-Day 90L Pack (1.5L x 60 Bottles)</h3>
             </Link>
             <p className="text-blue-600 text-xl font-bold mb-4">1000 THB</p>
             <p className="text-gray-700 mb-4 line-clamp-6">
@@ -208,8 +208,8 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
           </div>
 
           {/* Card 6 */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <div className="h-48 bg-white mb-4 rounded-lg overflow-hidden">
+          <div className="bg-blue-50 rounded-lg py-4">
+            <div className="h-48 bg-white rounded-lg overflow-hidden">
               <Link href={`/${lang}/bottled-drinking-water-delivery/${'30-Day 90L Pack (0.5L x 180 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
                 <Image
                   src="/images/30-days-2.webp"
@@ -221,7 +221,7 @@ export default function ProductHighlights({ lang }: ProductHighlightsProps) {
               </Link>
             </div>
             <Link href={`/${lang}/bottled-drinking-water-delivery/${'30-Day 90L Pack (0.5L x 180 Bottles)'.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition">30-Day 90L Pack (0.5L x 180 Bottles)</h3>
+              <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition line-clamp-2 md:line-clamp-none">30-Day 90L Pack (0.5L x 180 Bottles)</h3>
             </Link>
             <p className="text-blue-600 text-xl font-bold mb-4">1000 THB</p>
             <p className="text-gray-700 mb-4 line-clamp-6">

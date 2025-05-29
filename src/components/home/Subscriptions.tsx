@@ -31,7 +31,7 @@ export default function Subscriptions() {
     {
       id: 'subscription-every-two-weeks-0.5L',
       name: 'Every Two Weeks 45L Delivery Subscription (0.5L x 90 Bottles)',
-      description: 'Couples & small families: 45L of pure, safe bottled water delivered every two weeks to your Koh Samui location',
+      description: 'Couples & small families: 45L of pure, safe bottled water delivered every two weeks to your Koh Samui residence or vacation rental',
       price: 900,
       savings: 'Save 25%',
       image: '/images/14-days-2.webp'
@@ -75,8 +75,8 @@ Enjoy the convenience of regular deliveries and save up to 30% with our premium 
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {plans.map((plan) => (
-            <div key={plan.id} className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-              <div className="relative h-48 bg-white mb-4 rounded-lg overflow-hidden">
+            <div key={plan.id} className="bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition py-4">
+              <div className="relative h-48 bg-white rounded-lg overflow-hidden">
                 <Link href={`/bottled-drinking-water-delivery-subscription/${plan.name.toLowerCase()
                   .replace(/[^\w\s-]/g, '')
                   .replace(/\s+/g, '-')
@@ -109,7 +109,7 @@ Enjoy the convenience of regular deliveries and save up to 30% with our premium 
                 </Link>
               </h3>
               <p className="text-blue-600 text-xl font-bold mb-4">{plan.price} THB / Month</p>
-              <p className="text-gray-700 mb-4 line-clamp-6">{plan.description}</p>
+              <p className="text-gray-700 line-clamp-4 md:line-clamp-none">{plan.description}</p>
               <button
                 onClick={() => {
                   addToCart({
