@@ -12,6 +12,9 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.ico',
+  },
   title: "SamuiWater.com - Pure Bottled Water Delivery in Koh Samui",
   description: "TFDA-approved bottled water delivered to your hotel, villa, Airbnb or home in Koh Samui. Perfect for tourists and expats.",
   openGraph: {

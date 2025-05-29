@@ -96,7 +96,7 @@ Enjoy the convenience of regular deliveries and save up to 30% with our premium 
                   {plan.savings}
                 </span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 line-clamp-4">
                 <Link href={`/bottled-drinking-water-delivery-subscription/${plan.name.toLowerCase()
                   .replace(/[^\w\s-]/g, '')
                   .replace(/\s+/g, '-')
