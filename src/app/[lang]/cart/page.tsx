@@ -62,7 +62,7 @@ export default function CartPage({ params }: { params: Promise<{ lang: string }>
               <div className="divide-y divide-gray-200">
                 {cartItems.map((item) => (
                   <div key={item.id} className="p-6 flex justify-between items-center">
-                    <div className="flex items-center space-x-4 w-full">
+                    <div className="flex items-center space-x-4 w-full max-w-[calc(100%-120px)]">
                       <div className="w-24 h-24 sm:w-16 sm:h-16 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src={item.image || '/images/placeholder-product.jpg'}
