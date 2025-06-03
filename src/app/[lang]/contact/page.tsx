@@ -10,7 +10,7 @@ export default function ContactPage() {
         description="English-speaking water delivery service in Koh Samui"
         telephone="+66 83 8391 461"
         email="support@samuiwater.com"
-        address="9 Moo 1, Bophut, Koh Samui, Surat Thani 84320, Thailand"
+        address="73, 6, Koh Samui, Surat Thani 84320, Thailand"
         openingHours="Mo-Su 09:00-18:00"
         image="/images/logo.png"
       />
@@ -21,7 +21,7 @@ export default function ContactPage() {
         showButtons={false}
       />
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl mb-6">Contact Information</h2>
             <div className="space-y-4">
@@ -35,7 +35,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold">Address</h3>
-                <p>9 Moo 1, Bophut, Koh Samui, Surat Thani 84320, Thailand</p>
+                <p>73, 6, Koh Samui, Surat Thani 84320, Thailand</p>
               </div>
               <div>
                 <h3 className="font-semibold">Delivery Hours</h3>
@@ -61,6 +61,18 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container mx-auto px-4 pb-16">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7869.644911330965!2d100.04121491455706!3d9.52414973177449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae8de8153f6cc345%3A0xa35ac351ad9a8d7!2sSamui%20Water!5e0!3m2!1sen!2sth!4v1748925551256!5m2!1sen!2sth"
+          width="600"
+          height="450"
+          style={{border:0}}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full"
+        ></iframe>
       </div>
     </main>
     </>

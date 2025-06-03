@@ -12,8 +12,9 @@ export default function Footer() {
             <p className="text-gray-600 mb-2">Data Fellas Co., Ltd.</p>
             <p className="text-gray-600 mb-2">Tax ID: 4839274937194</p>
             <p className="text-gray-600">
-              9 Moo 1, Bophut, Koh Samui,<br />
-              Surat Thani 84320, Thailand
+              73, 6, Koh Samui,<br />
+              Surat Thani 84320, Thailand<br />
+              <a href="https://maps.app.goo.gl/oEcAMUTu5gtR3XoG9" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Maps</a>
             </p>
           </div>
 
